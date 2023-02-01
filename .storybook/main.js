@@ -1,6 +1,5 @@
 module.exports = {
   "stories": [
-    "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   "addons": [
@@ -9,6 +8,9 @@ module.exports = {
     "@storybook/addon-interactions",
     "@storybook/preset-create-react-app"
   ],
+  "features": {
+    "previewMdx2": "true"
+  },
   "framework": "@storybook/react",
   "core": {
     "builder": "@storybook/builder-webpack5"
