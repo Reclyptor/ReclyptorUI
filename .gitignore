@@ -1,5 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# library
+/dist
+
+# storybook
+/storybook-static
+
 # dependencies
 /node_modules
 /.pnp
@@ -21,6 +27,11 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+target
+
+# temp
+/.temp
 
 # ide
 /.idea
