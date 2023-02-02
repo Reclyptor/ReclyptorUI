@@ -4,13 +4,11 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
+    "@storybook/addon-docs",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/preset-create-react-app"
   ],
-  "features": {
-    "previewMdx2": "true"
-  },
   "framework": "@storybook/react",
   "core": {
     "builder": "@storybook/builder-webpack5"
