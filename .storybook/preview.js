@@ -1,4 +1,7 @@
+import '../src/tailwind.css';
+
 export const parameters = {
+  // layout: 'fullscreen',
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
