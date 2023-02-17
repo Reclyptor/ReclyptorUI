@@ -1,4 +1,5 @@
 import '../src/tailwind.css';
+import { themes } from '@storybook/theming';
 
 export const parameters = {
   // layout: 'fullscreen',
@@ -8,5 +9,8 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  docs: {
+    theme: themes.dark,
   },
 }
