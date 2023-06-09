@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { ForwardedRef, forwardRef } from "react";
 import { ButtonProps } from './Button.types';
 import useHAF from '../../../hook/useHAF';
 import clsx from 'clsx';
 import '../../../tailwind.css';
 
-const Button = (props: ButtonProps) => {
-  const { ref, hover, active } = useHAF<HTMLButtonElement>();
+const Button = forwardRef((props: ButtonProps, forwardedRef: ForwardedRef<HTMLButtonElement>) => {
+  const { ref, hover, active } = useHAF<HTMLButtonElement>(forwardedRef);
 
   return (
     <button ref={ ref } onClick={ props.onClick } className={ props.className }>
@@ -14,6 +14,6 @@ const Button = (props: ButtonProps) => {
       </div>
     </button>
   );
-};
+});
 
 export default Button;
