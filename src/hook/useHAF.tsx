@@ -1,4 +1,4 @@
-import { ForwardedRef, MutableRefObject, useEffect, useRef, useState } from "react";
+import { ForwardedRef, MutableRefObject, useEffect, useMemo, useRef, useState } from "react";
 
 const useHAF = <T extends HTMLElement>(_ref?: ForwardedRef<T>) => {
   const ref = useRef<T>(null);
@@ -6,6 +6,18 @@ const useHAF = <T extends HTMLElement>(_ref?: ForwardedRef<T>) => {
   const [active, setActive] = useState<boolean>(false);
   const [focus, setFocus] = useState<boolean>(false);
   const [width, setWidth] = useState<number>(0);
+
+  const state = useMemo<'default' | 'hover' | 'active' | 'focus'>(() => {
+    if (active) {
+      return 'active';
+    } else if (hover) {
+      return 'hover';
+    } else if (focus) {
+      return 'focus';
+    } else {
+      return 'default';
+    }
+  }, [hover, active, focus]);
 
   useEffect(() => {
     if (ref.current) {
@@ -42,7 +54,7 @@ const useHAF = <T extends HTMLElement>(_ref?: ForwardedRef<T>) => {
     }
   }, [ref.current]);
 
-  return { ref, hover, active, focus, width };
+  return { ref, state, hover, active, focus, width };
 };
 
 export default useHAF;
