@@ -1,10 +1,10 @@
-import { CSSProperties, DetailedHTMLProps, InputHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 
 export type CheckboxProps = {
+  checked?: boolean;
+  onChange?(_: boolean): void;
   indeterminate?: boolean;
   size?: 'sm' | 'md' | 'lg'; // Default 'md'
-  className?: string;
-  style?: CSSProperties;
 };
 
-export type StandardProps = Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, keyof CheckboxProps>;
+export type StandardProps = Omit<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, keyof CheckboxProps>;
