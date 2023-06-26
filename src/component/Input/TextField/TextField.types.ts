@@ -3,6 +3,8 @@ import { CSSProperties, DetailedHTMLProps, InputHTMLAttributes, ReactNode } from
 export type TextFieldProps = {
   prefix?: ReactNode;
   suffix?: ReactNode;
+  type?: 'text' | 'password'; // Default 'text'
+  clearable?: boolean;
   className?: string;
   style?: CSSProperties;
 };
