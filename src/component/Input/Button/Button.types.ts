@@ -1,8 +1,7 @@
-import { ReactNode } from 'react';
+import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 
-export interface ButtonProps {
-  onClick?(): void
-  size?: 'sm' | 'md' | 'lg' // Default 'md'
-  children?: ReactNode
-  className?: string
-}
+export type ButtonProps = {
+  size?: 'sm' | 'md' | 'lg'; // Default 'md'
+};
+
+export type StandardProps = Omit<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, keyof ButtonProps>;
