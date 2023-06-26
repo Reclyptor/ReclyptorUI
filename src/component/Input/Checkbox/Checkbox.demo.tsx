@@ -1,8 +1,8 @@
 import CheckboxComponent from './Checkbox';
-import { CheckboxProps } from './Checkbox.types';
+import { CheckboxProps } from "./Checkbox.types";
 
 export const DefaultProps: CheckboxProps = {
-  className: ''
+  size: "md"
 };
 
 export const Checkbox = (props: CheckboxProps) => {

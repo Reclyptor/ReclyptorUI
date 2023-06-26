@@ -2,7 +2,7 @@ import ToggleComponent from './Toggle';
 import { ToggleProps } from './Toggle.types';
 
 export const DefaultProps: ToggleProps = {
-  className: ''
+  size: "md"
 };
 
 export const Toggle = (props: ToggleProps) => {
