@@ -2,7 +2,7 @@ import TextFieldComponent from "./TextField";
 import { TextFieldProps } from "./TextField.types";
 
 export const DefaultProps: TextFieldProps = {
-  className: ''
+  className: "w-[150px]"
 };
 
 export const TextField = (props: TextFieldProps) => {

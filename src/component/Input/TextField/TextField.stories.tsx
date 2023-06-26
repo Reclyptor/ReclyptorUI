@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import documentation from "./TextField.mdx";
 
 export default {
-  title: "/TextField",
+  title: "Input/TextField",
   component: TextFieldComponent,
   parameters: { docs: { page: documentation } }
 } as ComponentMeta<typeof TextFieldComponent>;
