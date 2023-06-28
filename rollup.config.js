@@ -46,6 +46,7 @@ export default [
         declaration: true,
         declarationDir: 'dist',
         exclude: [
+          '**/*.mdx',
           '**/*.demo.tsx',
           '**/*.stories.tsx'
         ]
