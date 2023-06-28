@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import documentation from "./Card.mdx";
 
 export default {
-  title: "Data Display/Card",
+  title: "Surface/Card",
   component: CardComponent,
   parameters: { docs: { page: documentation } }
 } as ComponentMeta<typeof CardComponent>;
