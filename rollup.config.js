@@ -24,6 +24,7 @@ const injectStyles = () => ({
 export default [
   {
     input: [
+      'src/component/DataDisplay/Card/index.ts',
       'src/component/Input/Button/index.ts',
       'src/component/Input/Checkbox/index.ts',
       'src/component/Input/TextField/index.ts',
