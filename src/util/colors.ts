@@ -1,9 +1,3 @@
-import colors from '../color';
-
-export const color = (key: string): string => {
-  return (colors as { [key: string]: string })?.[key] || '#000000';
-};
-
 export const deltaE = (color: string, base: string = "#000000"): number => {
   const red = Number.parseInt(color.slice(1, 3), 16) - Number.parseInt(base.slice(1, 3), 16);
   const green = Number.parseInt(color.slice(3, 5), 16) - Number.parseInt(base.slice(3, 5), 16);
