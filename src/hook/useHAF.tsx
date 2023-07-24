@@ -1,11 +1,10 @@
-import { ForwardedRef, MutableRefObject, useEffect, useMemo, useRef, useState } from "react";
+import { ForwardedRef, useEffect, useMemo, useRef, useState } from "react";
 
 const useHAF = <T extends HTMLElement>(_ref?: ForwardedRef<T>) => {
   const ref = useRef<T>(null);
   const [hover, setHover] = useState<boolean>(false);
   const [active, setActive] = useState<boolean>(false);
   const [focus, setFocus] = useState<boolean>(false);
-  const [width, setWidth] = useState<number>(0);
 
   const state = useMemo<'default' | 'hover' | 'active' | 'focus'>(() => {
     if (active) {
@@ -38,7 +37,6 @@ const useHAF = <T extends HTMLElement>(_ref?: ForwardedRef<T>) => {
       ref.current.addEventListener('mouseup', onMouseUp);
       ref.current.addEventListener('focus', onFocus);
       ref.current.addEventListener('blur', onBlur);
-      setWidth(ref.current.offsetWidth);
 
       return () => {
         if (ref.current) {
@@ -48,13 +46,12 @@ const useHAF = <T extends HTMLElement>(_ref?: ForwardedRef<T>) => {
           ref.current.removeEventListener('mouseup', onMouseUp);
           ref.current.removeEventListener('focus', onFocus);
           ref.current.removeEventListener('blur', onBlur);
-          setWidth(0);
         }
       }
     }
   }, [ref.current]);
 
-  return { ref, state, hover, active, focus, width };
+  return { ref, state, hover, active, focus };
 };
 
 export default useHAF;
