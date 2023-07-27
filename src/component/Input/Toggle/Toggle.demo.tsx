@@ -2,6 +2,7 @@ import ToggleComponent from './Toggle';
 import { ToggleProps } from './Toggle.types';
 
 export const DefaultProps: ToggleProps = {
+  toggled: false,
   size: "md"
 };
 
