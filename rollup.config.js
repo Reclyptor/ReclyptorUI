@@ -56,7 +56,7 @@ export default [
         config: { path: './postcss.config.js' },
         extensions: ['.css'],
         minimize: true,
-        inject: { insertAt: 'bottom' }
+        inject: { insertAt: 'top' }
       }),
       injectStyles(),
     ],
