@@ -1,8 +1,6 @@
-import { Theme, ThemeConfiguration, ThemeProviderProps } from "./ThemeProvider.types";
-import { createContext } from "react";
+import { Theme, ThemeProviderProps } from "./ThemeProvider.types";
+import ThemeContext from "../ThemeContext";
 import useTheme from "../../hook/useTheme";
-
-const DefaultTheme: ThemeConfiguration = require("../../../theme.json");
 
 const ThemeProvider = (props: ThemeProviderProps) => {
   const theme: Theme = useTheme(props.theme);
@@ -14,5 +12,4 @@ const ThemeProvider = (props: ThemeProviderProps) => {
   );
 };
 
-export const ThemeContext = createContext<ThemeConfiguration>(DefaultTheme);
 export default ThemeProvider;

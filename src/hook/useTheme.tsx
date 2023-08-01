@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../style/ThemeProvider/ThemeProvider";
+import ThemeContext from "../style/ThemeContext";
 import { Theme, ThemeConfiguration } from "../style/ThemeProvider/ThemeProvider.types";
 import { blend } from "../util/colors";
 
