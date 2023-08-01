@@ -25,11 +25,9 @@ export const buttonStyle = (theme: Theme, state: State, style?: CSSProperties) =
   state === 'hover' ? theme.primary :
     state === 'active' ? theme.primaryAccent :
       theme.primaryMute,
-});
-
-export const divStyle = (theme: Theme, state: State, style?: CSSProperties) => ({
   color: style?.color ||
   state === 'hover' ? theme.primary :
     state === 'active' ? theme.primaryAccent :
       theme.primaryMute,
+  ...style
 });
