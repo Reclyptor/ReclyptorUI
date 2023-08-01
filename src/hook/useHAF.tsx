@@ -28,7 +28,7 @@ const useHAF = <T extends HTMLElement>(_ref?: ForwardedRef<T>) => {
         _ref(ref.current);
       }
       const onMouseEnter = () => setHover(true);
-      const onMouseLeave = () => setHover(false);
+      const onMouseLeave = () => { setHover(false); setActive(false); };
       const onMouseDown = () => setActive(true);
       const onMouseUp = () => setActive(false);
       const onFocus = () => setFocus(true);
