@@ -1,29 +1,20 @@
 import React, { forwardRef } from "react";
 import { ButtonProps, StandardProps } from "./Button.types";
-import { cva } from "class-variance-authority";
+import { buttonClass, buttonStyle, divStyle } from "./button.styles";
 import clsx from 'clsx';
+import useHAF from "../../../hook/useHAF";
 import useProps from "../../../hook/useProps";
+import useTheme from "../../../hook/useTheme";
 import '../../../tailwind.css';
 
-const classes = cva("", {
-  variants: {
-    size: {
-      sm: ["h-8"],
-      md: ["h-10"],
-      lg: ["h-12"]
-    }
-  },
-  defaultVariants: {
-    size: "md"
-  }
-});
-
-const Button = forwardRef<HTMLButtonElement, ButtonProps & StandardProps>((_props, ref) => {
+const Button = forwardRef<HTMLButtonElement, ButtonProps & StandardProps>((_props, _ref) => {
+  const theme = useTheme();
+  const { ref, state } = useHAF<HTMLButtonElement>(_ref);
   const { props, rest } = useProps<ButtonProps, StandardProps>(_props, ["size"]);
 
   return (
-    <button { ...rest } ref={ ref } className={ clsx("group min-w-[80px] rounded-lg bg-foreground-mute border-2 border-primary-mute hover:bg-foreground hover:border-primary active:bg-foreground-accent active:border-primary-accent", classes({ size: props.size }), rest.className) }>
-      { React.isValidElement(rest.children) ? rest.children : <div className="flex items-center justify-center w-full h-full text-primary-mute group-hover:text-primary group-active:text-primary-accent">{ rest.children }</div> }
+    <button { ...rest } ref={ ref } className={ clsx(buttonClass({ size: props.size }), rest.className) } style={ buttonStyle(theme, state, rest.style) }>
+      { React.isValidElement(rest.children) ? rest.children : <div className="flex items-center justify-center w-full h-full" style={ divStyle(theme, state, rest.style) }>{ rest.children }</div> }
     </button>
   );
 });

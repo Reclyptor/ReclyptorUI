@@ -1,12 +1,14 @@
 import { ForwardedRef, useEffect, useMemo, useRef, useState } from "react";
 
+export type State = 'default' | 'hover' | 'active' | 'focus';
+
 const useHAF = <T extends HTMLElement>(_ref?: ForwardedRef<T>) => {
   const ref = useRef<T>(null);
   const [hover, setHover] = useState<boolean>(false);
   const [active, setActive] = useState<boolean>(false);
   const [focus, setFocus] = useState<boolean>(false);
 
-  const state = useMemo<'default' | 'hover' | 'active' | 'focus'>(() => {
+  const state = useMemo<State>(() => {
     if (active) {
       return 'active';
     } else if (hover) {
