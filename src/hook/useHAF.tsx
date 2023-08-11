@@ -27,14 +27,14 @@ const useHAF = <T extends HTMLElement>(_ref?: ForwardedRef<T>) => {
       } else if (typeof _ref === 'function') {
         _ref(ref.current);
       }
-      const onMouseEnter = () => setHover(true);
-      const onMouseLeave = () => { setHover(false); setActive(false); };
+      const onMouseOver = () => setHover(true);
+      const onMouseOut = () => { setHover(false); setActive(false); };
       const onMouseDown = () => setActive(true);
       const onMouseUp = () => setActive(false);
       const onFocus = () => setFocus(true);
       const onBlur = () => setFocus(false);
-      ref.current.addEventListener('mouseenter', onMouseEnter);
-      ref.current.addEventListener('mouseleave', onMouseLeave);
+      ref.current.addEventListener('mouseover', onMouseOver);
+      ref.current.addEventListener('mouseout', onMouseOut);
       ref.current.addEventListener('mousedown', onMouseDown);
       ref.current.addEventListener('mouseup', onMouseUp);
       ref.current.addEventListener('focus', onFocus);
@@ -42,8 +42,8 @@ const useHAF = <T extends HTMLElement>(_ref?: ForwardedRef<T>) => {
 
       return () => {
         if (ref.current) {
-          ref.current.removeEventListener('mouseenter', onMouseEnter);
-          ref.current.removeEventListener('mouseleave', onMouseLeave);
+          ref.current.removeEventListener('mouseover', onMouseOver);
+          ref.current.removeEventListener('mouseout', onMouseOut);
           ref.current.removeEventListener('mousedown', onMouseDown);
           ref.current.removeEventListener('mouseup', onMouseUp);
           ref.current.removeEventListener('focus', onFocus);

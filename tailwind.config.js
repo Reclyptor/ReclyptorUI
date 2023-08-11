@@ -6,7 +6,7 @@ module.exports = {
       sans: ['"Nunito Sans"']
     },
     extend: {
-      colors: {}
+      colors: { ...require("./src/theme/default.json") }
     },
   },
   plugins: [],

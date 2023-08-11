@@ -1,32 +1,40 @@
 import { ReactNode } from "react";
 
 export type ThemeConfiguration = {
-  background: string;
-  foreground: string;
-  primary: string;
-  secondary: string;
+  background: {
+    default: string;
+    hover: string;
+    active: string;
+    focus: string;
+  };
+  foreground: {
+    default: string;
+    hover: string;
+    active: string;
+    focus: string;
+  };
+  primary: {
+    default: string;
+    hover: string;
+    active: string;
+    focus: string;
+  };
+  secondary: {
+    default: string;
+    hover: string;
+    active: string;
+    focus: string;
+  };
 };
 
-export type Theme = {
+export type Theme = ThemeConfiguration & {
   transparent: string;
   current: string;
   black: string;
   white: string;
-  background: string;
-  backgroundAccent: string;
-  backgroundMute: string;
-  foreground: string;
-  foregroundAccent: string;
-  foregroundMute: string;
-  primary: string;
-  primaryAccent: string;
-  primaryMute: string;
-  secondary: string;
-  secondaryAccent: string;
-  secondaryMute: string;
 };
 
 export type ThemeProviderProps = {
-  theme?: Partial<ThemeConfiguration>;
+  theme?: ThemeConfiguration;
   children?: ReactNode;
 };

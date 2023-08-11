@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'src/util/react';
+import React, { ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 export const findByType = (children: ReactNode, type: string) => {

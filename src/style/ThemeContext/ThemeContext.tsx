@@ -1,7 +1,7 @@
-import { ThemeConfiguration } from "../ThemeProvider/ThemeProvider.types";
+import { Theme } from "../ThemeProvider/ThemeProvider.types";
 import { createContext } from "react";
+import loadTheme from "../loadTheme/loadTheme";
 
-const DefaultTheme: ThemeConfiguration = require("../../../theme.json");
+const ThemeContext = createContext<Theme>(loadTheme());
 
-const ThemeContext = createContext<ThemeConfiguration>(DefaultTheme);
 export default ThemeContext;

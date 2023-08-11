@@ -24,11 +24,7 @@ const injectStyles = () => ({
 export default [
   {
     input: [
-      'src/component/DataDisplay/Card/index.ts',
       'src/component/Input/Button/index.ts',
-      'src/component/Input/Checkbox/index.ts',
-      'src/component/Input/TextField/index.ts',
-      'src/component/Input/Toggle/index.ts',
     ],
     output: {
       dir: 'dist',
@@ -56,7 +52,7 @@ export default [
         config: { path: './postcss.config.js' },
         extensions: ['.css'],
         minimize: true,
-        inject: { insertAt: 'top' }
+        inject: { insertAt: 'bottom' }
       }),
       injectStyles(),
     ],
