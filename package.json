@@ -1,10 +1,12 @@
 {
   "name": "reclyptorui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && rollup -c && shx cp package.json dist",
+    "deploy": "npm install && npm run build && cd dist && npm publish",
+    "test-deploy": "npm install && npm run build && cd dist && npm --registry http://localhost:4873/ publish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -s public"
   },
@@ -86,5 +88,9 @@
     "tailwindcss": "^3.1.8",
     "tslib": "^2.4.0",
     "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
