@@ -5,9 +5,7 @@ module.exports = {
     fontFamily: {
       sans: ['"Nunito Sans"']
     },
-    extend: {
-      colors: { ...require("./src/theme/default.json") }
-    },
+    extend: {},
   },
   plugins: [],
 }
