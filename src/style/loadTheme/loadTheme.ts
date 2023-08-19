@@ -1,6 +1,6 @@
 import { Theme, ThemeConfiguration } from "../ThemeProvider/ThemeProvider.types";
 
-const defaultTheme: ThemeConfiguration = require("../../theme/default.json");
+import defaultTheme from "../../theme/default.json";
 
 const loadTheme = (theme: ThemeConfiguration = defaultTheme): Theme => {
   return {
