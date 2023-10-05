@@ -5,7 +5,7 @@ export const DefaultProps: ButtonProps = {
 };
 
 export const Button = (props: ButtonProps) => {
-  return <ButtonComponent { ...props }>Button</ButtonComponent>;
+  return <ButtonComponent { ...props } className="px-2">Button</ButtonComponent>;
 };
 
 export default () => <Button { ...DefaultProps } />;
