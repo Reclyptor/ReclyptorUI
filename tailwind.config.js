@@ -5,7 +5,14 @@ module.exports = {
     fontFamily: {
       sans: ['"Nunito Sans"']
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        background: "var(--color-background)",
+        foreground: "var(--color-foreground)",
+      }
+    },
   },
   plugins: [],
 }
