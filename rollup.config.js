@@ -9,6 +9,7 @@ export default [
   {
     input: [
       'src/component/Input/Button/index.ts',
+      'src/style/index.ts',
     ],
     output: {
       dir: 'dist',

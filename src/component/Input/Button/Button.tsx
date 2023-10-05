@@ -9,7 +9,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps & StandardProps>((_prop
   const { props, rest } = useProps<ButtonProps, StandardProps>(_props, ["size"]);
 
   return (
-    <button { ...rest } ref={ _ref } className={ clsx("min-w-[32px] min-h-[32px] bg-foreground text-primary border-2 border-primary rounded-lg", clazz(props), rest.className) }>
+    <button { ...rest } ref={ _ref } className={ clsx("min-w-[32px] min-h-[32px] bg-foreground text-primary hover:text-primary-hover active:text-primary-active focus:text-primary-focus border-2 border-primary hover:border-primary-hover active:border-primary-active focus:border-primary-focus rounded-lg", clazz(props), rest.className) }>
       { React.isValidElement(rest.children) ? rest.children : <div className="flex items-center justify-center w-full h-full">{ rest.children }</div> }
     </button>
   );

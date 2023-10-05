@@ -7,9 +7,20 @@
 @layer base {
   :root {
     --color-primary: #A4C639;
-    --color-secondary: #C339C6;
-    --color-background: #141414;
+    --color-primary-hover: #C0E34E;
+    --color-primary-active: #DBFF63;
+    --color-primary-focus: #DBFF63;
+    --color-secondary: #5B39C6;
+    --color-secondary-hover: #724EE3;
+    --color-secondary-active: #8863FF;
+    --color-secondary-focus: #8863FF;
+    --color-tertiary: #C76E30;
+    --color-tertiary-hover: #E38644;
+    --color-tertiary-active: #FF9D57;
+    --color-tertiary-focus: #FF9D57;
+    --color-background: #1F1F1F;
     --color-foreground: #222222;
+    --color-surface: #2B2B2B;
   }
 }
 

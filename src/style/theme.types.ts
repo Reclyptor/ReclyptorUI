@@ -1,13 +1,17 @@
 export type Theme = {
   primary: string;
+  primaryHover: string;
+  primaryActive: string;
+  primaryFocus: string;
   secondary: string;
+  secondaryHover: string;
+  secondaryActive: string;
+  secondaryFocus: string;
+  tertiary: string;
+  tertiaryHover: string;
+  tertiaryActive: string;
+  tertiaryFocus: string;
   background: string;
   foreground: string;
-};
-
-export type ThemeObject = {
-  '--color-primary': string;
-  '--color-secondary': string;
-  '--color-background': string;
-  '--color-foreground': string;
+  surface: string;
 };
