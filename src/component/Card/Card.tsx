@@ -6,11 +6,17 @@ import clsx from "clsx";
 import "../../tailwind.css";
 
 const Card = forwardRef<HTMLDivElement, CardProps & StandardProps>((_props, _ref) => {
-  const { props, rest } = useProps<CardProps, StandardProps>(_props, []);
+  const { props, rest } = useProps<CardProps, StandardProps>(_props, ["flip", "solid", "front", "back", "variant"]);
 
   return (
     <div { ...rest } ref={ _ref } className={ clsx(clazz(props), rest.className) }>
-      { React.isValidElement(rest.children) ? rest.children : <div className="flex items-center justify-center w-full h-full">{ rest.children }</div> }
+      { rest.children ?
+        <div className="flex items-center justify-center w-full h-full bg-[inherit] rounded-[inherit] [backface-visibility:hidden]">{ rest.children }</div> :
+        <>
+          <div className="absolute flex items-center justify-center w-full h-full bg-[inherit] rounded-[inherit] [backface-visibility:hidden]">{ props.front }</div>
+          <div className="absolute flex items-center justify-center w-full h-full bg-[inherit] rounded-[inherit] [backface-visibility:hidden] [transform:rotateY(180deg)]">{ props.back }</div>
+        </>
+      }
     </div>
   );
 });
