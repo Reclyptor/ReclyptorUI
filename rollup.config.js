@@ -8,7 +8,7 @@ import json from '@rollup/plugin-json';
 export default [
   {
     input: [
-      'src/component/Input/Button/index.ts',
+      'src/component/Button/index.ts',
       'src/style/index.ts',
     ],
     output: {

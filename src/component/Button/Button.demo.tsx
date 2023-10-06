@@ -1,4 +1,4 @@
-import ButtonComponent from './Button';
+import ButtonComponent from "./Button";
 import { ButtonProps } from "./Button.types";
 
 export const DefaultProps: ButtonProps = {

@@ -1,9 +1,9 @@
 import React, { forwardRef } from "react";
 import { ButtonProps, StandardProps } from "./Button.types";
 import { clazz } from "./Button.styles";
-import useProps from "../../../hook/useProps";
+import useProps from "../../hook/useProps";
 import clsx from "clsx";
-import "../../../tailwind.css";
+import "../../tailwind.css";
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps & StandardProps>((_props, _ref) => {
   const { props, rest } = useProps<ButtonProps, StandardProps>(_props, ["solid", "size", "variant"]);
