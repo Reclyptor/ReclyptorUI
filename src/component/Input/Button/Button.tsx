@@ -6,7 +6,7 @@ import clsx from "clsx";
 import "../../../tailwind.css";
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps & StandardProps>((_props, _ref) => {
-  const { props, rest } = useProps<ButtonProps, StandardProps>(_props, ["size", "variant"]);
+  const { props, rest } = useProps<ButtonProps, StandardProps>(_props, ["solid", "size", "variant"]);
 
   return (
     <button { ...rest } ref={ _ref } className={ clsx(clazz(props), rest.className) }>
