@@ -7,7 +7,7 @@ export const clazz = cva("border-2 focus:outline-none rounded-lg", {
       true: null,
     },
     size: {
-      undefined: "min-w-fit min-h-fit",
+      undefined: "min-w-fit h-fit",
       sm: "min-w-6 h-6",
       md: "min-w-8 h-8",
       lg: "min-w-10 h-10",
