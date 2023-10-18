@@ -38,13 +38,22 @@
       "last 1 safari version"
     ]
   },
-  "bundleDependencies": true,
+  "bundleDependencies": [
+    "class-variance-authority",
+    "clsx",
+    "crypto-js",
+    "lucide-react",
+    "style-inject",
+    "tslib",
+    "uuid"
+  ],
   "dependencies": {
     "class-variance-authority": "^0.7.0",
     "clsx": "^1.2.1",
     "crypto-js": "^4.1.1",
     "lucide-react": "^0.115.0",
     "style-inject": "^0.3.0",
+    "tailwind-merge": "^1.14.0",
     "tslib": "^2.4.0",
     "uuid": "^9.0.0"
   },
