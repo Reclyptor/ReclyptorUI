@@ -8,7 +8,6 @@ const useDebounce = (fn: (...args: any) => void, timeout = 500): typeof fn => {
       clearTimeout(timer.current);
     }
     timer.current = setTimeout(() => fn(...args), timeout);
-    return () => clearTimeout(timer.current);
   };
 };
 
