@@ -1,5 +1,5 @@
 import TableComponent from "./Table";
-import { TableProps } from "./Table.types";
+import { TableProps } from "./Table/Table.types";
 
 export const DefaultProps: TableProps = {
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { TableProps } from "./Table.types";
+import { TableProps } from "./Table/Table.types";
 import { Table as TableComponent, DefaultProps } from "./Table.demo";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import documentation from "./Table.mdx";
