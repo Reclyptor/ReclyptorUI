@@ -9,6 +9,10 @@ export default [
   {
     input: [
       'src/component/Button/index.ts',
+      'src/component/Card/index.ts',
+      'src/component/Progress/index.ts',
+      'src/component/Spinner/index.ts',
+      'src/component/Table/index.ts',
       'src/style/index.ts',
     ],
     output: {
