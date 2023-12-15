@@ -7,7 +7,7 @@ import clsx from "clsx";
 import "../../../tailwind.css";
 
 const Row = forwardRef<HTMLTableRowElement, RowProps & StandardProps>((_props, _ref) => {
-  const { props, rest } = useProps<RowProps, StandardProps>(_props, []);
+  const { props, rest } = useProps<RowProps, StandardProps>(_props, ['variant']);
 
   return (
     <tr { ...rest } ref={ _ref } className={ twMerge(clsx(clazz(props), rest.className)) } />
