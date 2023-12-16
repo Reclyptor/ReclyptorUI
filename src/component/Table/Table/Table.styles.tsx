@@ -11,8 +11,8 @@ export const clazz = cva("bg-background rounded-lg [border-collapse:separate] [b
     border: {
       true: [
         "[&>thead>tr>th]:border-b-0 [&>thead>tr:last-child>th]:border-b-2",
-        "[&>tbody>tr>td]:border-b-2 [&>tbody>tr:last-child>td]:border-b-0",
         "[&>thead>tr>th]:border-r-2 [&>thead>tr>th:last-child]:border-r-0",
+        "[&>tbody>tr>td]:border-b-2 [&>tbody>tr:last-child>td]:border-b-0",
         "[&>tbody>tr>td]:border-r-2 [&>tbody>tr>td:last-child]:border-r-0"
       ],
       horizontal: [
@@ -53,6 +53,5 @@ export const clazz = cva("bg-background rounded-lg [border-collapse:separate] [b
     }
   ],
   defaultVariants: {
-    variant: "primary"
   }
 });

@@ -7,7 +7,7 @@ import clsx from "clsx";
 import "../../../tailwind.css";
 
 const Head = forwardRef<HTMLTableSectionElement, HeadProps & StandardProps>((_props, _ref) => {
-  const { props, rest } = useProps<HeadProps, StandardProps>(_props, ['variant']);
+  const { props, rest } = useProps<HeadProps, StandardProps>(_props, ['highlight', 'border', 'variant']);
 
   return (
     <thead { ...rest } ref={ _ref } className={ twMerge(clsx(clazz(props), rest.className)) } />

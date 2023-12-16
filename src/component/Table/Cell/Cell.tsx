@@ -7,10 +7,10 @@ import clsx from "clsx";
 import "../../../tailwind.css";
 
 const Cell = forwardRef<HTMLTableCellElement, CellProps & StandardProps>((_props, _ref) => {
-  const { props, rest } = useProps<CellProps, StandardProps>(_props, ['variant']);
+  const { props, rest } = useProps<CellProps, StandardProps>(_props, ['highlight', 'border', 'variant']);
 
   return (
-    <td { ...rest } ref={ _ref } className={ twMerge(clsx(clazz(props), rest.className)) } />
+    <td { ...rest } ref={ _ref } align={ rest.align || "left" } className={ twMerge(clsx(clazz(props), rest.className)) } />
   );
 });
 

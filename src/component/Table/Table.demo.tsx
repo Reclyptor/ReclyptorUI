@@ -10,6 +10,17 @@ import pokemon from "./pokemon.json";
 export const DefaultProps: TableProps = {
 };
 
+type Pokemon = {
+  id: number;
+  species_id: number;
+  identifier: string;
+  height: number;
+  weight: number;
+  base_experience: number;
+  order: number;
+  is_default: boolean;
+};
+
 export const Table = (props: TableProps) => {
   return (
     <TableComponent { ...props }>
@@ -27,17 +38,17 @@ export const Table = (props: TableProps) => {
       </Head>
       <Body>
         {
-          pokemon.map((p) =>
-              <Row>
-                <Cell>{ p.id }</Cell>
-                <Cell>{ p.species_id }</Cell>
-                <Cell>{ p.identifier }</Cell>
-                <Cell>{ p.height }</Cell>
-                <Cell>{ p.weight }</Cell>
-                <Cell>{ p.base_experience }</Cell>
-                <Cell>{ p.order }</Cell>
-                <Cell>{ p.is_default }</Cell>
-              </Row>
+          pokemon.map((p, idx) =>
+            <Row>
+              <Cell>{ p.id }</Cell>
+              <Cell>{ p.species_id }</Cell>
+              <Cell>{ p.identifier }</Cell>
+              <Cell>{ p.height }</Cell>
+              <Cell>{ p.weight }</Cell>
+              <Cell>{ p.base_experience }</Cell>
+              <Cell>{ p.order }</Cell>
+              <Cell>{ p.is_default }</Cell>
+            </Row>
           )
         }
       </Body>
