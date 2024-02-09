@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 
-export const clazz = cva("border-2 focus:outline-none rounded-lg", {
+export const clazz = cva("border-2 focus:outline-none rounded-lg px-2", {
   variants: {
     solid: {
       false: null,
