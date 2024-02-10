@@ -8,6 +8,7 @@ import Cell from "./Cell";
 import pokemon from "./pokemon.json";
 
 export const DefaultProps: TableProps = {
+  variant: "primary"
 };
 
 type Pokemon = {
