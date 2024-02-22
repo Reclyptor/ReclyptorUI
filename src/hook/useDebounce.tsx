@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 
 const useDebounce = (fn: (...args: any) => void, timeout = 500): typeof fn => {
   const timer = useRef<ReturnType<typeof setTimeout>>();

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { sha1 } from "../util/hash";
 import { toMap } from "../util/reducer";
 
